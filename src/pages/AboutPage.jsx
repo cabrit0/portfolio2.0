@@ -10,10 +10,10 @@ console.log(programer, soldering);
 const About = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="min-h-screen bg-gray-800">
+      <div className="min-h-screen bg-slate-800">
         <div className=" flex items-center justify-center py-12">
           <div className="text-center px-8 md:px-72">
-            <h1 className="text-4xl py-2 md:text-5xl font-medium text-myGreen">
+            <h1 className="text-4xl py-4 md:text-5xl font-medium text-myGreen">
               About me
             </h1>
             <div className="flex flex-col md:flex-row items-center justify-center md:my-24">
