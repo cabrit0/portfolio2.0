@@ -9,7 +9,7 @@ import ContactPage from "./pages/ContactPage";
 function App() {
   return (
     <div className="App">
-      <div className="firefly-bg z-5">
+      <div className="firefly-bg z-25">
         <div className="firefly"></div>
         <div className="firefly"></div>
         <div className="firefly"></div>
