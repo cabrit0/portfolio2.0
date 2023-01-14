@@ -19,7 +19,7 @@ const Nav = () => {
     <nav className="bg-slate-800 flex items-center justify-between px-8 md:px-16 nav-h">
       <Link
         to="/"
-        className="nav-link text-myGreen font-medium text-xl md:text-3xl "
+        className="nav-link text-myGreen font-medium text-2xl md:text-3xl "
         onClick={() => handleLinkClick("home")}
       >
         cabrit0

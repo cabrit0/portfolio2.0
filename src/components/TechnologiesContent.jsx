@@ -91,7 +91,7 @@ const TechnologiesContent = () => {
         <h2 className="text-3xl text-center my-4 text-myGreen font-medium">
           Technologies I Use
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 py-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-4">
           {technologies.map((tech) => (
             <TechnologiesCard
               key={tech.title}
@@ -106,7 +106,7 @@ const TechnologiesContent = () => {
         <h2 className="text-3xl text-center my-4 text-myGreen font-medium">
           What I want to learn..
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {technologiesIWantToLearn.map((tech) => (
             <TechnologiesCard
               key={tech.title}
