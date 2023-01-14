@@ -55,7 +55,7 @@ const Nav = () => {
             exit={{ x: "100%" }}
             className="fixed top-0 left-0 w-full h-full z-50 bg-myBlue"
           >
-            <div className="pt-48 mb-16 px-20 flex flex-col justify-center ">
+            <div className="pt-24 mb-10 px-20 flex flex-col justify-center ">
               <Link
                 to="/about"
                 onClick={handleLinkClick}
