@@ -1,35 +1,81 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+import programer from "../assets/cabrit0_programer.png";
+import soldering from "../assets/cabrit0_soldering.png";
+import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
+console.log(programer, soldering);
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-slate-800 flex flex-col items-center justify-center bg-myGreen-800 p-8">
-      <h1 className="text-4xl md:text-5xl font-medium text-white mb-4">
-        About
-      </h1>
-      <p className="text-lg md:text-xl text-myBege opacity-80 mb-8">
-        A successful website does three things: It attracts the right kinds of
-        visitors. Guides them to the main services or product you offer. Collect
-        Contact details for future ongoing relation.
-      </p>
-      <div className="w-4/5">
-        <p className="text-lg md:text-xl text-white mb-4">
-          I am a FrontEnd developer with self-taught skills and a creative
-          spirit. I am curious by nature and pay special attention to
-          technologies, always with the ambition to develop new knowledge and
-          participate in challenging projects.
-        </p>
-        <p className="text-lg md:text-xl text-myBege opacity-80 mb-4">
-          My mantra is "com calma e com alma," which means "with calm and with
-          soul." I believe that this approach is essential in developing
-          high-quality, visually striking, and user-friendly websites.
-        </p>
-        <p className="text-lg md:text-xl text-white">
-          In my portfolio, you'll find a selection of my latest projects. I hope
-          they inspire you to reach out to me to discuss how we can work
-          together to create something truly special.
-        </p>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="min-h-screen bg-gray-800">
+        <div className=" flex items-center justify-center py-12">
+          <div className="text-center px-8 md:px-72">
+            <h1 className="text-4xl py-2 md:text-5xl font-medium text-myGreen">
+              About me
+            </h1>
+            <div className="flex flex-col md:flex-row items-center justify-center md:my-24">
+              <p className="text-lg md:text-xl text-myBege opacity-90 my-2">
+                <span className="flex">
+                  <FaQuoteLeft className="text-myYellow mr-2" />
+                  A successful website does three things: It attracts the right
+                  kinds of visitors, Guides them to the main services or product
+                  you offer and Collect Contact details for future ongoing
+                  relation.
+                  <FaQuoteRight className="text-myYellow ml-2" />
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className=" grid grid-cols-1 px-8 md:px-44 md:grid-cols-2 gap-4">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 120, delay: 0.2 }}
+            className="px-8 md:mt-10 flex flex-col justify-between"
+          >
+            <p className="text-md md:text-xl text-myBege opacity-60">
+              I am aFrontEnd developer with self-taught skills and a creative
+              spirit. I am curious by nature and pay special attention to
+              technologies, always with the ambition to develop new knowledge
+              and participate in challenging projects.
+            </p>
+            <motion.img
+              src={programer}
+              alt="programer"
+              className="w-52 h-w-52 md:w-72 md:h-72 md:mt-16 m-auto"
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 120, delay: 0.4 }}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 120, delay: 0.4 }}
+            className="px-8 md:mt-10 flex flex-col justify-between"
+          >
+            <p className="text-md md:text-xl text-myBege opacity-60">
+              I am currently working with electronics, but have a passion for
+              programming and looking to change my career to align with my
+              passions. I strive to create websites that are different,
+              creative, and professional.
+            </p>
+            <motion.img
+              src={soldering}
+              alt="programer"
+              className="w-52 h-w-52 md:w-72 md:h-72 md:mt-16 m-auto"
+              initial={{ y: 100, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 120, delay: 0.6 }}
+            />
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

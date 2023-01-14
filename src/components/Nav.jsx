@@ -13,7 +13,7 @@ const Nav = () => {
   return (
     <nav className="bg-slate-800 flex items-center justify-between px-8 md:px-16 nav-h">
       <Link to="/" className="nav-link text-myGreen font-medium text-xl ">
-        Home
+        cabrit0
       </Link>
       <div className="hidden md:flex">
         <Link

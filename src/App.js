@@ -1,8 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -11,7 +7,6 @@ import TechnologiesPage from "./pages/TechnologiesPage";
 import ContactPage from "./pages/ContactPage";
 
 function App() {
-
   return (
     <div className="App">
       <div className="firefly-bg z-5">

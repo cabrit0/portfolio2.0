@@ -7,7 +7,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-
+/* NAV STYLES */
 .min-h-screen {
   min-height: calc(100vh - 4rem);
 }
@@ -39,6 +39,8 @@
   }
 }
 
+
+/* FIREFIES BACKGORUND STYLES */
 .firefly-bg {
   position: fixed;
   left: 0;
