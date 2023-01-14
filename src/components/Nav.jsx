@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
-import { BiMenuAltLeft } from "react-icons/bi";
-import { BiMenuAltRight } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Nav = () => {
@@ -13,32 +11,32 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-slate-800 flex items-center justify-between px-6 py-3 nav-h">
-      <Link to="/" className="nav-link text-myGreen font-medium text-xl">
-        Home
+    <nav className="bg-slate-800 flex items-center justify-between px-16 py- nav-h">
+      <Link to="/" className="nav-link text-myGreen font-medium text-xl hover:text-myBege duration-300 hover:scale-110">
+        cabrit0
       </Link>
       <div className="hidden md:flex">
         <Link
           to="/about"
-          className="nav-link text-myGreen font-medium mr-4 text-lg"
+          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
         >
           About
         </Link>
         <Link
           to="/projects"
-          className="nav-link text-myGreen font-medium mr-4 text-lg"
+          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
         >
           Projects
         </Link>
         <Link
           to="/technologies"
-          className="nav-link text-myGreen font-medium mr-4 text-lg"
+          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
         >
           Technologies
         </Link>
         <Link
           to="/contact"
-          className="nav-link text-myGreen font-medium text-lg"
+          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
         >
           Contact
         </Link>
@@ -57,41 +55,58 @@ const Nav = () => {
             exit={{ x: "100%" }}
             className="fixed top-0 left-0 w-full h-full z-50 bg-myBlue"
           >
-            <div className="py-20 flex flex-col justify-center items-center">
+            <div className="pt-48 mb-16 px-20 flex flex-col justify-center ">
               <Link
                 to="/about"
                 onClick={handleLinkClick}
-                className="block text-myGreen my-3 text-2xl font-bold hover:scale-110 hover:text-myYellow"
+                className="block text-myGreen my-3 text-2xl font-bold hover:translate-x-8 hover:-translate-y-2 hover:scale-110 hover:text-myYellow duration-300"
               >
-                About
+                _About
               </Link>
               <Link
                 to="/projects"
                 onClick={handleLinkClick}
-                className="block text-myGreen my-3 text-2xl font-bold hover:scale-110 hover:text-myYellow"
+                className="block text-myGreen my-3 text-2xl font-bold hover:translate-x-8 hover:-translate-y-2 hover:scale-110 hover:text-myYellow duration-300"
               >
-                Projects
+                _Projects
               </Link>
               <Link
                 to="/technologies"
                 onClick={handleLinkClick}
-                className="block text-myGreen my-3 text-2xl font-bold hover:scale-110 hover:text-myYellow"
+                className="block text-myGreen my-3 text-2xl font-bold hover:translate-x-8 hover:-translate-y-2 hover:scale-110 hover:text-myYellow duration-300"
               >
-                Technologies
+                _Technologies
               </Link>
               <Link
                 to="/contact"
                 onClick={handleLinkClick}
-                className="block text-myGreen my-3 text-2xl font-bold hover:scale-110 hover:text-myYellow"
+                className="block text-myGreen my-3 text-2xl font-bold hover:translate-x-8 hover:-translate-y-2 hover:scale-110 hover:text-myYellow duration-300"
               >
-                Contact
+                _Contact
               </Link>
             </div>
-            <p className="flex justify-center mt-24 text-myYellow text-2xl font-light">
-              @Com calma e com alma! 🚀👨‍💻
-            </p>
+            <div className="py-6 px-20 flex flex-col justify-center">
+              <h2 className="py-3 text-myGreen text-2xl">Send me a message</h2>
+              <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
+                cabrito0o.dev@gmail.com
+              </p>
+              <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
+                www.linkedin.com/in/cabrit0/
+              </p>
+              <button className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
+                Download my CV
+              </button>
+            </div>
+            <div className="py-6">
+              <p className="flex justify-center mt-24 text-myYellow text-2xl font-light">
+                @Com calma e com alma! 🚀👨‍💻
+              </p>
+              <div className="absolute top-5 left-10 p-4 text-myGreen text-3xl ">
+                cabrit0
+              </div>
+            </div>
             <button
-              className="absolute top-0 right-0 p-4 text-myGreen text-lg hover:text-myRed"
+              className="absolute top-5 right-5 p-4 text-myGreen text-lg hover:text-myRed duration-300 hover:scale-110 hover:-translate-y-1"
               onClick={handleLinkClick}
             >
               Back

@@ -14,8 +14,15 @@ function App() {
 
   return (
     <div className="App">
+      <div className="firefly-bg z-5">
+        <div className="firefly"></div>
+        <div className="firefly"></div>
+        <div className="firefly"></div>
+        <div className="firefly"></div>
+        <div className="firefly"></div>
+      </div>
       <Router>
-        <Nav/>
+        <Nav />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />

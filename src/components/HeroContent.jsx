@@ -62,7 +62,7 @@ const HeroContent = () => {
             transition={{ delay: 2.5, duration: 1.5 }}
             whileHover={{ rotate: [-1.2, 0.2], transition: { duration: 1 } }}
             transitionend={{ rotate: -1 }}
-            className="text-md text-myRed opacity-40 hover:font-bold hover:scale-125"
+            className="text-md text-myRed opacity-40 hover:font-bold hover:scale-125 w-68"
           >
             Join me in pushing the boundaries of digital innovation
           </motion.p>

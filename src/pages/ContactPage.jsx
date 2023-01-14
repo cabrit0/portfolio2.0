@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ContactPage = () => {
-  return (
-    <div>ContactPage</div>
-  )
-}
+  return <div className="min-h-screen bg-slate-800">ContactPage</div>;
+};
 
-export default ContactPage
+export default ContactPage;
