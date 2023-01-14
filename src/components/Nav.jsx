@@ -7,12 +7,12 @@ export const CurrentPageContext = createContext();
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState("home");
+  //const [currentPage, setCurrentPage] = useState("home");
   //console.log(currentPage);
 
   const handleLinkClick = (page) => {
     setIsMenuOpen(false);
-    setCurrentPage(page);
+    //setCurrentPage(page);
   };
 
   return (
