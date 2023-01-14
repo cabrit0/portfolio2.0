@@ -14,16 +14,20 @@ const AboutPageContent = () => {
             <h1 className="text-4xl py-4 md:text-5xl font-medium text-myGreen">
               About me
             </h1>
-            <div className="flex flex-col md:flex-row items-center justify-center md:my-24">
-              <p className="text-lg md:text-xl text-myBege opacity-90 my-2">
-                <span className="flex">
-                  <FaQuoteLeft className="text-myYellow mr-2" />
+            <div className="md:flex-row items-center justify-center md:my-24">
+              <p className="flex flex-col text-lg md:text-3xl text-myBege opacity-90 my-2">
+                <div className="w-full flex">
+                  <FaQuoteLeft className="w-2 h-2 text-myYellow ml-2" />
+                </div>
+                <span className="flex px-2">
                   A successful website does three things: It attracts the right
                   kinds of visitors, Guides them to the main services or product
                   you offer and Collect Contact details for future ongoing
                   relation.
-                  <FaQuoteRight className="text-myYellow ml-2" />
                 </span>
+                <div className="w-full flex items-end justify-end">
+                  <FaQuoteRight className="w-2 h-2 text-myYellow mr-2 text-right" />
+                </div>
               </p>
             </div>
           </div>

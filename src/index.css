@@ -39,6 +39,27 @@
   }
 }
 
+/* CARDS TECHNOLOGIES */
+.card {
+  width: 190px;
+  height: 120px;
+  transition: all 1.5s;
+  box-shadow: 25px 25px 40px rgba(25, 25, 25, 0.452),
+    -15px -15px 30px rgba(60, 60, 60, 0);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover .description {
+  visibility: visible;
+  transition: all 1.5s;
+}
+
+.description {
+  visibility: hidden;
+  transition: visibility 0.5s;
+}
 
 /* FIREFIES BACKGORUND STYLES */
 .firefly-bg {

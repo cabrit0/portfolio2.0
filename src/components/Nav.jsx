@@ -1,42 +1,55 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi";
 import { motion, AnimatePresence } from "framer-motion";
 
+export const CurrentPageContext = createContext();
+
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState("home");
+  console.log(currentPage);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = (page) => {
     setIsMenuOpen(false);
+    setCurrentPage(page);
   };
 
   return (
     <nav className="bg-slate-800 flex items-center justify-between px-8 md:px-16 nav-h">
-      <Link to="/" className="nav-link text-myGreen font-medium text-xl ">
+      <Link
+        to="/"
+        className="nav-link text-myGreen font-medium text-xl md:text-3xl "
+        onClick={() => handleLinkClick("home")}
+      >
         cabrit0
       </Link>
       <div className="hidden md:flex">
         <Link
           to="/about"
           className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          onClick={() => handleLinkClick("about")}
         >
           About
         </Link>
         <Link
-          to="/projects"
-          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
-        >
-          Projects
-        </Link>
-        <Link
           to="/technologies"
           className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          onClick={() => handleLinkClick("technologies")}
         >
           Technologies
         </Link>
         <Link
+          to="/projects"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          onClick={() => handleLinkClick("projects")}
+        >
+          Projects
+        </Link>
+        <Link
           to="/contact"
           className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          onClick={() => handleLinkClick("contact")}
         >
           Contact
         </Link>
@@ -64,18 +77,18 @@ const Nav = () => {
                 _About
               </Link>
               <Link
-                to="/projects"
-                onClick={handleLinkClick}
-                className="block text-myGreen my-3 text-2xl font-bold hover:translate-x-8 hover:-translate-y-2 hover:scale-110 hover:text-myYellow duration-300"
-              >
-                _Projects
-              </Link>
-              <Link
                 to="/technologies"
                 onClick={handleLinkClick}
                 className="block text-myGreen my-3 text-2xl font-bold hover:translate-x-8 hover:-translate-y-2 hover:scale-110 hover:text-myYellow duration-300"
               >
                 _Technologies
+              </Link>
+              <Link
+                to="/projects"
+                onClick={handleLinkClick}
+                className="block text-myGreen my-3 text-2xl font-bold hover:translate-x-8 hover:-translate-y-2 hover:scale-110 hover:text-myYellow duration-300"
+              >
+                _Projects
               </Link>
               <Link
                 to="/contact"
@@ -98,7 +111,7 @@ const Nav = () => {
               </button>
             </div>
             <div className="py-6">
-              <p className="flex justify-center mt-24 text-myYellow text-2xl font-light">
+              <p className="flex justify-center mt-12 text-myYellow text-2xl font-light">
                 @Com calma e com alma! 🚀👨‍💻
               </p>
               <div className="absolute top-2 left-2 md:top-5 md:left-10 p-4 text-myGreen text-3xl ">

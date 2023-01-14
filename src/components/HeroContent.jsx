@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 
 const HeroContent = () => {
-  /* const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }); */
-  /* const handleMouseMove = (event) => {
-    setMousePosition({ x: event.clientX, y: event.clientY });
-  };
- */
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -67,6 +62,16 @@ const HeroContent = () => {
             Join me in pushing the boundaries of digital innovation
           </motion.p>
         </div>
+        <motion.p
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1.5 }}
+          className="text-sm md:text-lg  text-myBege opacity-60"
+        >
+          <button className="flex justify-end items-end my-6 opacity-70 text-myBege hover:text-myYellow hover:opacity-100 hover:translate-x-2 hover:-translate-y-1 hover:scale-110 duration-300">
+            Download my CV
+          </button>
+        </motion.p>
       </div>
     </motion.div>
   );
