@@ -9,11 +9,11 @@
 
 
 .min-h-screen {
-  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 4rem);
 }
 
 .nav-h {
-  height: 6rem;
+  height: 4rem;
 }
 
 .nav-link:hover {

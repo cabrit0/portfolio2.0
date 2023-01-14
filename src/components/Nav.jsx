@@ -11,32 +11,32 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-slate-800 flex items-center justify-between px-16 py- nav-h">
-      <Link to="/" className="nav-link text-myGreen font-medium text-xl hover:text-myBege duration-300 hover:scale-110">
-        cabrit0
+    <nav className="bg-slate-800 flex items-center justify-between px-8 md:px-16 nav-h">
+      <Link to="/" className="nav-link text-myGreen font-medium text-xl ">
+        Home
       </Link>
       <div className="hidden md:flex">
         <Link
           to="/about"
-          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
         >
           About
         </Link>
         <Link
           to="/projects"
-          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
         >
           Projects
         </Link>
         <Link
           to="/technologies"
-          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
         >
           Technologies
         </Link>
         <Link
           to="/contact"
-          className="nav-link text-myGreen font-medium mx-8 text- hover:text-myBege duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
         >
           Contact
         </Link>
@@ -101,12 +101,12 @@ const Nav = () => {
               <p className="flex justify-center mt-24 text-myYellow text-2xl font-light">
                 @Com calma e com alma! 🚀👨‍💻
               </p>
-              <div className="absolute top-5 left-10 p-4 text-myGreen text-3xl ">
+              <div className="absolute top-2 left-2 md:top-5 md:left-10 p-4 text-myGreen text-3xl ">
                 cabrit0
               </div>
             </div>
             <button
-              className="absolute top-5 right-5 p-4 text-myGreen text-lg hover:text-myRed duration-300 hover:scale-110 hover:-translate-y-1"
+              className="absolute top-2 right-2 md:top-5 md:right-5 p-4 text-myGreen text-lg hover:text-myRed duration-300 hover:scale-110 hover:-translate-y-1"
               onClick={handleLinkClick}
             >
               Back
