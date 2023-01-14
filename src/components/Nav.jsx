@@ -8,7 +8,7 @@ export const CurrentPageContext = createContext();
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
-  console.log(currentPage);
+  //console.log(currentPage);
 
   const handleLinkClick = (page) => {
     setIsMenuOpen(false);
@@ -16,7 +16,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-slate-800 flex items-center justify-between px-8 md:px-16 nav-h">
+    <nav className="bg-slate-800 flex items-center justify-between px-8 md:px-24 nav-h">
       <Link
         to="/"
         className="nav-link text-myGreen font-medium text-2xl md:text-3xl "
