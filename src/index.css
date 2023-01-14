@@ -66,6 +66,7 @@
   justify-content: center;
   background: #354f52;
   margin-bottom: 16px;
+  z-index: 2;
 }
 
 .description {
