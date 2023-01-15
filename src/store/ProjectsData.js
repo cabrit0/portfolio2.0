@@ -51,7 +51,7 @@ export const projects = [
     name: "Agenda para alunos",
     img: agenda,
     description:
-      "webApp to scedule school works, login system. CRUD operations on REST API created by me.",
+      "webApp to schedule school works, login system. CRUD operations on REST API created by me.",
     technologies: ["JavaScript", "Nodejs", "MongoDB", "CSS", "ExpressJS"],
     liveURL: "https://agenda-app-crud-v1.herokuapp.com/",
     repoURL: "https://github.com/cabrit0/AGENDA",
@@ -68,7 +68,7 @@ export const projects = [
     name: "Password Generator",
     img: passwordGenerator,
     description:
-      "Simple app so generate passwords. strength can be selected based on low and upper letters, numbers and symbols.",
+      "Simple app to generate passwords. strength can be selected based on low and upper letters, numbers and symbols.",
     technologies: ["JavaScript", "HTML", "CSS"],
     liveURL: "https://cabrit0.github.io/passwordGen/",
     repoURL: "https://github.com/cabrit0/passwordGen",
