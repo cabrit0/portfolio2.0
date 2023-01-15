@@ -19,7 +19,7 @@ const Nav = () => {
     <nav className="bg-slate-800 flex items-center justify-between px-8 md:px-24 nav-h">
       <Link
         to="/"
-        className="nav-link text-myGreen font-medium text-2xl md:text-3xl "
+        className="nav-link text-myGreen font-medium text-2xl md:text-3xl hover:text-myBege"
         onClick={() => handleLinkClick("home")}
       >
         cabrit0
@@ -27,28 +27,28 @@ const Nav = () => {
       <div className="hidden md:flex">
         <Link
           to="/about"
-          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110 hover:text-myBege"
           onClick={() => handleLinkClick("about")}
         >
           About
         </Link>
         <Link
           to="/technologies"
-          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110 hover:text-myBege"
           onClick={() => handleLinkClick("technologies")}
         >
           Technologies
         </Link>
         <Link
           to="/projects"
-          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110 hover:text-myBege"
           onClick={() => handleLinkClick("projects")}
         >
           Projects
         </Link>
         <Link
           to="/contact"
-          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110"
+          className="nav-link text-myGreen font-medium mx-8 text-lg duration-300 hover:scale-110 hover:text-myBege"
           onClick={() => handleLinkClick("contact")}
         >
           Contact

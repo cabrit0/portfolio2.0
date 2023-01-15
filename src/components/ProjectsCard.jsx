@@ -1,8 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const ProjectsCard = (project) => {
   return (
-    <div className="h-full w-full flex flex-col items-center justify-between bg-myGreenDark">
+    <motion.div
+      className="h-full w-full flex flex-col items-center justify-between bg-myGreenDark"
+      whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px #888888" }}
+    >
       <img
         src={project.img}
         alt={project.name}
@@ -22,15 +26,23 @@ const ProjectsCard = (project) => {
           ))}
         </div>
         <div className="mt-4 flex items-center justify-center">
-          <button className="text-myGreen text-sm font-medium px-4 py-2 rounded-lg duration-300 hover:text-myYellow hover:scale-110 hover:translate-x-1 hover:-translate-y-2">
+          <motion.button
+            className="text-myGreen text-sm font-medium px-4 py-2 rounded-lg duration-300 hover:text-myYellow"
+            whileHover={{ scale: 1.1, x: -1, y: -2 }}
+            whileTap={{ scale: 0.9 }}
+          >
             Live Site
-          </button>
-          <button className="text-myGreen text-sm font-medium px-4 py-2 rounded-lg duration-300 hover:text-myYellow hover:scale-110 hover:translate-x-1 hover:-translate-y-2">
+          </motion.button>
+          <motion.button
+            className="text-myGreen text-sm font-medium px-4 py-2 rounded-lg duration-300 hover:text-myYellow"
+            whileHover={{ scale: 1.1, x: -1, y: -2 }}
+            whileTap={{ scale: 0.9 }}
+          >
             Code Repository
-          </button>
+          </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
