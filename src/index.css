@@ -7,6 +7,18 @@
   font-family: "Roboto", sans-serif;
 }
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 /* NAV STYLES */
 .min-h-screen {
   min-height: calc(100vh - 4rem);

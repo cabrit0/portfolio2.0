@@ -13,7 +13,7 @@ function App() {
 
   return (
     <pageCtx.Provider value={{ currentPage, setCurrentPage }}>
-      <div className="App">
+      <div className="App ">
         <div className="firefly-bg z-25">
           <div className="firefly"></div>
           <div className="firefly z-1000"></div>

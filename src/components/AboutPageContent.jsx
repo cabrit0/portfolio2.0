@@ -8,8 +8,8 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 const AboutPageContent = () => {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="">
-        <div className=" flex items-center justify-center py-12">
+      <div className="no-scrollbar">
+        <div className=" flex items-center justify-center py-12 ">
           <div className="text-center px-8 md:px-72">
             <h1 className="text-4xl py-4 md:text-5xl font-medium text-myGreen">
               About me
@@ -40,7 +40,7 @@ const AboutPageContent = () => {
             className="px-8 md:mt-10 flex flex-col justify-between"
           >
             <p className="text-md md:text-xl text-myBege opacity-60">
-              I am aFrontEnd developer with self-taught skills and a creative
+              I am a FrontEnd developer with self-taught skills and a creative
               spirit. I am curious by nature and pay special attention to
               technologies, always with the ambition to develop new knowledge
               and participate in challenging projects.
@@ -61,7 +61,7 @@ const AboutPageContent = () => {
             className="px-8 md:mt-10 flex flex-col justify-between"
           >
             <p className="text-md md:text-xl text-myBege opacity-60">
-              I am currently working with electronics, but have a passion for
+              Currently working with electronics, but have a passion for
               programming and looking to change my career to align with my
               passions. I strive to create websites that are different,
               creative, and professional.

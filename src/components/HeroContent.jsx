@@ -68,9 +68,11 @@ const HeroContent = () => {
           transition={{ delay: 1.5, duration: 1.5 }}
           className="text-sm md:text-lg  text-myBege opacity-60"
         >
-          <button className="flex justify-end items-end my-6 opacity-70 text-myBege hover:text-myYellow hover:opacity-100 hover:translate-x-2 hover:-translate-y-1 hover:scale-110 duration-300">
-            Download my CV
-          </button>
+          <a href={require("../assets/CV.pdf")} download="CabritoCV">
+            <button className="flex justify-end items-end my-6 opacity-70 text-myBege hover:text-myYellow hover:opacity-100 hover:translate-x-2 hover:-translate-y-1 hover:scale-110 duration-300">
+              Download my CV
+            </button>
+          </a>
         </motion.p>
       </div>
     </motion.div>

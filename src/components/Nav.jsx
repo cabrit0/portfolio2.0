@@ -103,12 +103,16 @@ const Nav = () => {
               <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
                 cabrito0o.dev@gmail.com
               </p>
-              <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
-                www.linkedin.com/in/cabrit0/
-              </p>
-              <button className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
-                Download my CV
-              </button>
+              <a href="https://www.linkedin.com/in/cabrit0/" target="_blank" rel="noreferrer">
+                <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
+                  www.linkedin.com/in/cabrit0/
+                </p>
+              </a>
+              <a href={require("../assets/CV.pdf")} download="CabritoCV">
+                <button className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
+                  Download my CV
+                </button>
+              </a>
             </div>
             <div className="py-6">
               <p className="flex justify-center mt-12 text-myYellow text-2xl font-light">
