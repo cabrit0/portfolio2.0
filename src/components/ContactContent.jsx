@@ -15,21 +15,31 @@ const ContactContent = () => {
     submitSuccess: false,
   });
 
+  const handleChange = (e) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+      [e.target.email_from]: e.target.value,
+      [e.target.message]: e.target.value,
+      [`${e.target.name}Error`]: "",
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     let nameError = "";
     let emailError = "";
     let messageError = "";
     if (!formState.name) {
-      nameError = "Name is required";
+      nameError = "*Name is required";
     }
     if (!formState.email_from) {
-      emailError = "Email is required";
+      emailError = "*Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formState.email_from)) {
-      emailError = "Email address is invalid";
+      emailError = "*Email address is invalid";
     }
     if (!formState.message) {
-      messageError = "Message is required";
+      messageError = "*Message is required";
     }
     if (nameError || emailError || messageError) {
       setFormState({
@@ -59,6 +69,12 @@ const ContactContent = () => {
       .catch((err) => console.log(err));
   };
 
+  /* console.log(
+    "name: " + formState.name,
+    "email: " + formState.email_from,
+    "message: " + formState.message
+  ); */
+
   return (
     <AnimatePresence>
       <motion.div
@@ -84,31 +100,33 @@ const ContactContent = () => {
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
                   className="block text-myGreen font-medium mb-2"
-                  for="name"
+                  htmlFor="name"
                 >
                   Name
                 </label>
                 <input
-                  className="appearance-none block w-full bg-myBlue text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  className="appearance-none block w-full bg-myBlue text-myBege rounded py-3 px-4 leading-tight focus:outline-none focus:scale-110 duration-300"
                   id="name"
                   name="name"
                   type="text"
                   placeholder="Your Name.."
+                  onChange={handleChange}
                 />
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label
                   className="block text-myGreen font-medium mb-2"
-                  for="email_from"
+                  htmlFor="email_from"
                 >
                   Email
                 </label>
                 <input
-                  className="appearance-none block w-full bg-myBlue text-gray-700 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray/300"
+                  className="appearance-none block w-full bg-myBlue text-myBege rounded py-3 px-4 leading-tight focus:outline-none focus:scale-110 duration-300"
                   placeholder="example@email.com"
                   name="email_from"
                   type="email"
                   id="email_from"
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -120,40 +138,50 @@ const ContactContent = () => {
                 >
                   Message
                 </label>
-                <motion.textarea
-                  className="appearance-none block w-full bg-myBlue text-gray-700 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                <textarea
+                  className="appearance-none block w-full bg-myBlue text-myBege rounded py-3 px-4 leading-tight focus:outline-none focus:scale-110 duration-300"
                   id="message"
                   name="message"
                   rows="4"
                   placeholder="Write your message here..."
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: 20, opacity: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                ></motion.textarea>
+                  onChange={handleChange}
+                ></textarea>
               </div>
             </div>
             <div className="flex flex-wrap -mx-3 mb-6">
               <div>
-                <div>
-                  {formState.submitSuccess && <p>Success</p>}
-                  {formState.nameError && <p>{formState.nameError}</p>}
-                  {formState.emailError && <p>{formState.emailError}</p>}
-                  {formState.messageError && <p>{formState.messageError}</p>}
+                <div className="px-8 flex flex-wrap py-1 pb-4">
+                  {formState.submitSuccess && (
+                    <p className="text-md opacity-70 px-2 hover:opacity-95 text-myGreen">
+                      Success!! I recived your email and will reply ASSAP!
+                      Thanks for your contact
+                    </p>
+                  )}
+                  {formState.nameError && (
+                    <p className="text-md opacity-70 px-2 hover:opacity-95 text-myRed">
+                      {formState.nameError}
+                    </p>
+                  )}
+                  {formState.emailError && (
+                    <p className="text-md opacity-70 px-2 hover:opacity-95 text-myRed">
+                      {formState.emailError}
+                    </p>
+                  )}
+                  {formState.messageError && (
+                    <p className="text-md opacity-70 px-2 hover:opacity-95 text-myRed">
+                      {formState.messageError}
+                    </p>
+                  )}
                 </div>
               </div>
 
               <div className="w-full px-3">
-                <motion.button
-                  className="text-myGreen opacity-80 font-medium py-2 px-4 hover:opacity-100 hover:text-myYellow"
+                <button
+                  className="text-myGreen opacity-80 font-medium py-2 px-4 hover:opacity-100 hover:text-myYellow hover:scale-125 hover:translate-x-1 hover:-translate-y-2 duration-300"
                   type="submit"
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: 20, opacity: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
                 >
                   Send
-                </motion.button>
+                </button>
               </div>
             </div>
           </motion.form>
@@ -168,7 +196,9 @@ const ContactContent = () => {
           <div className="text-myGreen font-medium">Follow me on:</div>
           <div className="mt-2 flex flex-col justify-end items-start py-8 opacity-75">
             <motion.a
-              href="/"
+              href="https://www.instagram.com/jcabrit0/"
+              target="_blank"
+              rel="noreferrer"
               className="text-myGreen hover:text-myYellow flex items-center my-0.5"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -179,6 +209,9 @@ const ContactContent = () => {
               https://instagram.com/jcabrit0
             </motion.a>
             <motion.a
+              href="https://twitter.com/Cabrit0Dev"
+              target="_blank"
+              rel="noreferrer"
               className="text-myGreen hover:text-myYellow flex items-center my-0.5"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -189,7 +222,9 @@ const ContactContent = () => {
               https://twitter.com/Cabrit0Dev
             </motion.a>
             <motion.a
-              href="/"
+              href="https://www.linkedin.com/in/cabrit0/"
+              target="_blank"
+              rel="noreferrer"
               className="text-myGreen hover:text-myYellow flex items-center my-0.5"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -197,10 +232,12 @@ const ContactContent = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <SiLinkedin className="mr-4" />
-              https://linkedin.com/in/cabritodev
+              https://linkedin.com/in/cabrit0
             </motion.a>
             <motion.a
-              href="/"
+              href="https://github.com/cabrit0"
+              target="_blank"
+              rel="noreferrer"
               className="text-myGreen hover:text-myYellow flex items-center my-0.5"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -208,7 +245,7 @@ const ContactContent = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <SiGithub className="mr-4" />
-              https://github.com/cabritodev
+              https://github.com/cabrit0
             </motion.a>
           </div>
           <div className="flex items-center justify-center">

@@ -100,10 +100,16 @@ const Nav = () => {
             </div>
             <div className="py-6 px-20 flex flex-col justify-center">
               <h2 className="py-3 text-myGreen text-2xl">Send me a message</h2>
-              <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
-                cabrito0o.dev@gmail.com
-              </p>
-              <a href="https://www.linkedin.com/in/cabrit0/" target="_blank" rel="noreferrer">
+              <a href="mailto:cabrito0o.dev@gmail.com">
+                <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
+                  cabrito0o.dev@gmail.com
+                </p>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/cabrit0/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <p className="flex w-40 text-myGreen opacity-80 hover:font-bold duration-300 hover:scale-105 hover:-translate-y-1 hover:translate-x-2 hover:opacity-100 hover:text-myYellow">
                   www.linkedin.com/in/cabrit0/
                 </p>
