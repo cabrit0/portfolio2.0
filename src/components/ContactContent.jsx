@@ -86,7 +86,7 @@ const ContactContent = () => {
       >
         <div className="">
           <h2 className="text-3xl text-center text-myGreen font-medium mb-8">
-            Contact Me
+            Let's Change the Web together!
           </h2>
           <motion.form
             className="w-full md:max-w-4xl px-16 mb-16 mx-auto"

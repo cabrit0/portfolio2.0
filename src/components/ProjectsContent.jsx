@@ -4,6 +4,7 @@ import ProjectsCard from "./ProjectsCard";
 import { projects } from "../store/ProjectsData";
 
 const ProjectsContent = () => {
+  console.log(projects);
   return (
     <motion.div
       className="flex flex-col items-center justify-center px-4 md:px-12 py-12"
@@ -32,6 +33,8 @@ const ProjectsContent = () => {
               img={project.img}
               description={project.description}
               technologies={project.technologies}
+              liveURL={project.liveURL}
+              repoURL={project.repoURL}
             />
           </motion.div>
         ))}

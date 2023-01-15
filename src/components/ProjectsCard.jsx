@@ -2,16 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const ProjectsCard = (project) => {
+  console.log(project);
   return (
     <motion.div
       className="h-full w-full flex flex-col items-center justify-between bg-myGreenDark"
       whileHover={{ scale: 1.05, boxShadow: "0px 0px 15px #888888" }}
     >
-      <img
-        src={project.img}
-        alt={project.name}
-        className="w-full h-96 px-16 md:px-20 py-2 rounded-2xl"
-      />
+      <div className="h-96 overflow-hidden px-16 md:px-20 py-2 rounded-2xl">
+        <img src={project.img} alt={project.name} className="w-full h-full " />
+      </div>
       <div className="px-6 py-4">
         <h2 className="text-2xl font-medium text-myGreen">{project.name}</h2>
         <p className="text-myBege text-md mt-2">{project.description}</p>
@@ -31,14 +30,18 @@ const ProjectsCard = (project) => {
             whileHover={{ scale: 1.1, x: -1, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            Live Site
+            <a href={project.liveURL} target="_blank" rel="noreferrer">
+              Live Site
+            </a>
           </motion.button>
           <motion.button
             className="text-myGreen text-sm font-medium px-4 py-2 rounded-lg duration-300 hover:text-myYellow"
             whileHover={{ scale: 1.1, x: -1, y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            Code Repository
+            <a href={project.repoURL} target="_blank" rel="noreferrer">
+              Code Repository
+            </a>
           </motion.button>
         </div>
       </div>
