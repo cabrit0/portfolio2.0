@@ -11,7 +11,7 @@ export const projects = [
     img: fitness4U,
     description:
       "WebApp for gym with Login user roles, create workouts, assign workouts to the calendar built in, manage users, private functionality based on roles system.",
-    technologies: ["React", "NodeJS", "MongoDB", "ExpressJS", "CSS "Tailwind"],
+    technologies: ["React", "NodeJS", "MongoDB", "ExpressJS", "CSS", "Tailwind"],
   },
   {
     name: "Ferias4U",
