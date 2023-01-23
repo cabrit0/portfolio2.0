@@ -51,7 +51,7 @@ export const projects = [
     name: "Agenda para alunos",
     img: agenda,
     description:
-      "webApp to schedule school works, login system. CRUD operations on REST API created by me.",
+      "webApp to schedule school works, login system. CRUD operations on REST API created by me. Project made along with a course.",
     technologies: ["JavaScript", "Nodejs", "MongoDB", "CSS", "ExpressJS"],
     liveURL: "https://agenda-app-crud-v1.herokuapp.com/",
     repoURL: "https://github.com/cabrit0/AGENDA",
@@ -59,7 +59,8 @@ export const projects = [
   {
     name: "Despesas4U",
     img: expenseTracker,
-    description: "Simple app to track expenses with animated chart.",
+    description:
+      "Simple app to track expenses with animated chart. Project made along with a course.",
     technologies: ["React", "NodeJS", "ExpressJS"],
     liveURL: "https://despesa4u.netlify.app/",
     repoURL: "https://github.com/cabrit0/Despesa4U",
