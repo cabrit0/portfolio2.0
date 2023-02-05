@@ -10,7 +10,7 @@ export const projects = [
     name: "Fullstack Fitness4U",
     img: fitness4U,
     description:
-      "WebApp for gym with Login user roles, create workouts, assign workouts to the calendar built in, manage users, private functionality based on roles system.",
+      "WebApp for gym with Login user roles, create workouts, assign workouts to the calendar built in, manage users, private functionality based on roles system. *Login with email: test@gym.pt password: testUser",
     technologies: [
       "React",
       "NodeJS",
@@ -26,7 +26,7 @@ export const projects = [
     name: "Ferias4U",
     img: ferias4U,
     description:
-      "Fullstack WebApp for workers to take its vacations or days off. With login, user roles system, calendar with day off functionality, create day off, user info based on roles system.",
+      "Fullstack WebApp for workers to take its vacations or days off. With login, user roles system, calendar with day off functionality, create day off, user info based on roles system. *Login with email: test@faltas.pt password: testUser",
     technologies: [
       "React",
       "NodeJS",
